@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export DEB_HOST_MULTIARCH
+DEB_DEBIAN_DIR=$(dir $(firstword $(MAKEFILE_LIST)))
+VER=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
+              | sed -rne 's,^Version: ([^-]+).*,\1,p')
+GITREV=$(shell echo $(VER) | sed -rne 's,[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\.([0-f]+),\1,p')
+
+%:
+	dh $@ --sourcedirectory=host --builddirectory=build
+
+override_dh_auto_configure: debian/libhackrf0.udev
+	dh_auto_configure --sourcedirectory=host --builddirectory=build -- -DLIB_SUFFIX=/$(DEB_HOST_MULTIARCH)
+
+debian/libhackrf0.udev: host/libhackrf/53-hackrf.rules
+	cp -p host/libhackrf/53-hackrf.rules debian/libhackrf0.udev
+
+get-orig-source:
+	git clone https://github.com/mossmann/hackrf.git
+	cd hackrf && git archive --format=tar --prefix=hackrf-$(VER)/  $(GITREV) | xz > ../hackrf_$(VER).orig.tar.xz
+	rm -rf hackrf

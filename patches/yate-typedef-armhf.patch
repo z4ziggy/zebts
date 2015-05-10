@@ -1,0 +1,13 @@
+diff -Naur yate.org/libs/miniwebrtc/typedefs.h yate/libs/miniwebrtc/typedefs.h
+--- yate.org/libs/miniwebrtc/typedefs.h 2015-05-07 21:07:15.638444001 +0000
++++ yate/libs/miniwebrtc/typedefs.h     2015-05-07 20:56:28.000000000 +0000
+@@ -66,7 +66,7 @@
+ #define WEBRTC_ARCH_X86
+ #define WEBRTC_ARCH_32_BITS
+ #define WEBRTC_ARCH_LITTLE_ENDIAN
+-#elif defined(__ARMEL__)
++#elif defined(__ARMEL__) || defined(__ARMHF__)
+ // TODO(andrew): We'd prefer to control platform defines here, but this is
+ // currently provided by the Android makefiles. Commented to avoid duplicate
+ // definition warnings.
+

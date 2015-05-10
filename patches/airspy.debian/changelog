@@ -1,0 +1,32 @@
+airspy-host (1.0.5-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- ziggy <ziggy@zbuild>  Fri, 08 May 2015 16:09:50 +0000
+
+airspy-host (0.2.22.b4c38a7-1) unstable; urgency=low
+
+  * New upstream commits
+    Merge branch 'master' of https://github.com/airspy/host.git
+    Added a two poles BPF for proper roll-off
+    Fix for Issue #4 airspy_commands.h is not installed
+    Implemented new API airspy_set_samplerate(), airspy_gpio_read(),
+     airspy_gpio_write() and airspy_set_rf_bias() only for AirSpy NOS.
+    Added a function stub for RF bias (bias-tee, phantom-power)
+    Added function stubs for extra hardware sample rates
+  
+ -- A. Maitland Bottoms <bottoms@debian.org>  Wed, 20 Aug 2014 10:31:26 -0400
+
+airspy-host (0.2.14.f26db23-1) unstable; urgency=low
+
+  * New upstream commit - Changed the IQ conversion filters 
+    to match the bandwidth of the new R820T2 tuner
+  * place airspy in comm archive section (Closes: #751349)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Tue, 17 Jun 2014 20:34:47 -0400
+
+airspy-host (0.2.13.9350af1-1) unstable; urgency=low
+
+  * New package (Closes: #745263)
+
+ -- A. Maitland Bottoms <bottoms@debian.org>  Sat, 19 Apr 2014 20:36:56 -0400

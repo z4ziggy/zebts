@@ -1,0 +1,11 @@
+diff -Naur src/smqueue/debian/control mnt/root/src/smqueue/debian/control
+--- src/smqueue/debian/control	2015-05-08 22:28:03.634444001 +0000
++++ mnt/root/src/smqueue/debian/control	2015-05-08 22:30:41.000000000 +0000
+@@ -11,6 +11,6 @@
+ Priority: optional
+ Architecture: any
+ Essential: no
+-Depends: sqlite3, libosip2-4 | libosip2-10, libzmq3
++Depends: sqlite3, libosip2-4 | libosip2-10 | libosip2-11, libzmq3
+ Description: Range Networks - SMQueue RFC-3428 Store and Forward Server
+ 

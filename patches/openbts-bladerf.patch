@@ -1,0 +1,33 @@
+diff --git a/apps/OpenBTS.example.sql b/apps/OpenBTS.example.sql
+index 916ff14..3cf8523 100644
+--- a/apps/OpenBTS.example.sql
++++ b/apps/OpenBTS.example.sql
+@@ -173,12 +173,12 @@ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.Band','900',1,0,'The GSM operat
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.C0','51',1,0,'The C0 ARFCN.  Also the base ARFCN for a multi-ARFCN configuration.  Static.');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.MaxExpectedDelaySpread','4',0,0,'Expected worst-case delay spread in symbol periods, roughly 3.7 us or 1.1 km per unit.  This parameter is dependent on the terrain type in the installation area.  Typical values are: 1 for open terrain and small coverage areas, a value of 4 is strongly recommended for large coverage areas.  This parameter has a large effect on computational requirements of the software radio; values greater than 4 should be avoided.');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.NeedBSIC','0',0,0,'1=enabled, 0=disabled - Whether the Radio type requires the full BSIC.');
+-INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.PowerManager.MaxAttenDB','10',0,0,'Maximum transmitter attenuation level, in dB wrt full scale on the D/A output.  This sets the minimum power output level in the output power control loop.');
+-INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.PowerManager.MinAttenDB','0',0,0,'Minimum transmitter attenuation level, in dB wrt full scale on the D/A output.  This sets the maximum power output level in the output power control loop.');
++INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.PowerManager.MaxAttenDB','35',0,0,'Maximum transmitter attenuation level, in dB wrt full scale on the D/A output.  This sets the minimum power output level in the output power control loop.');
++INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.PowerManager.MinAttenDB','35',0,0,'Minimum transmitter attenuation level, in dB wrt full scale on the D/A output.  This sets the maximum power output level in the output power control loop.');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.PowerManager.RampTime','60',0,0,'On start-up, OpenBTS ramps up power from GSM.Radio.PowerManager.MaxAttenDB to GSM.Radio.PowerManager.MinAttenDB.  This value is the duration of the ramp period in seconds.  ');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.RSSIAveragePeriod','8',0,0,'Number of RSSI samples averaged over when computing RSSI to compare to RSSITarget in the MS power control loop.  If this number is too low the ordered MS TXPWR may bounce around unnecessarily.  If this number is too high the MS TXPWR may not change quickly enough to respond to changing conditions.  ');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.RSSITarget','-50',0,0,'Target uplink RSSI (Received Signal Strength Indication) for MS power control loop, in dB wrt to A/D full scale.  The MS power control loop adjusts MS TXPWR (transmit power) to try to keep RSSI at this level, or to satisfy GSM.Radio.SNRTarget, whichever requires more power.  Should be 6-10 dB above the noise floor.');
+-INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.RxGain','47',1,0,'Receiver gain setting in dB.  Ideal value is dictated by the hardware; 47 dB for RAD1.  This database parameter is static but the receiver gain can be modified in real time with the CLI "rxgain" command.  Static.');
++INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.RxGain','5',1,0,'Receiver gain setting in dB.  Ideal value is dictated by the hardware; 47 dB for RAD1.  This database parameter is static but the receiver gain can be modified in real time with the CLI "rxgain" command.  Static.');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.SNRAveragePeriod','8',0,0,'Number of SNR samples averaged over when computing SNR to compare to SNRTarget in the MS power control loop.  If this number is too low the ordered MS TXPWR may bounce around unnecessarily.  If this number is too high the MS TXPWR may not change quickly enough to respond to changing conditions.  This is not the control variable used for handover decisions. ');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.Radio.SNRTarget','10',0,0,'The MS power control loop adjusts MS TXPWR (transmit power) to try to keep SNR (Signal to Noise Ratio) above this level.');
+ INSERT OR IGNORE INTO "CONFIG" VALUES('GSM.ShowCountry','0',0,0,'1=enabled, 0=disabled - Tell the MS to show the country name based on the MCC.');
+diff --git a/Transceiver52M/Makefile.am b/Transceiver52M/Makefile.am
+index 4bc062c..cc72940 100644
+--- a/Transceiver52M/Makefile.am
++++ b/Transceiver52M/Makefile.am
+@@ -23,7 +23,7 @@ include $(top_srcdir)/Makefile.common
+ 
+ DESTDIR = 
+ 
+-AM_CFLAGS = $(STD_DEFINES_AND_INCLUDES) -std=gnu99 -march=native
++AM_CFLAGS = $(STD_DEFINES_AND_INCLUDES) -std=gnu99 -march=armv7-a
+ # AM_CPPFLAGS = $(STD_DEFINES_AND_INCLUDES)
+ # AM_CXXFLAGS = -ldl -lpthread
+ 

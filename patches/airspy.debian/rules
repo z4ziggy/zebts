@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export DEB_HOST_MULTIARCH
+DEB_DEBIAN_DIR=$(dir $(firstword $(MAKEFILE_LIST)))
+VER=$(shell dpkg-parsechangelog -l$(DEB_DEBIAN_DIR)/changelog \
+              | sed -rne 's,^Version: ([^-]+).*,\1,p')
+GITREV=$(shell echo $(VER) | sed -rne 's,[0-9]+\.[0-9]+\.[0-9]+\.([0-f]+),\1,p')
+
+%:
+	dh $@ --builddirectory=build
+
+override_dh_auto_configure: debian/libairspy0.udev
+	dh_auto_configure --builddirectory=build -- -DLIB_SUFFIX=/$(DEB_HOST_MULTIARCH)
+
+debian/libairspy0.udev: airspy-tools/52-airspy.rules
+	cp -p airspy-tools/52-airspy.rules debian/libairspy0.udev
+
+get-orig-source:
+	git clone https://github.com/airspy/host.git
+	cd host && git archive --format=tar --prefix=airspy-host-$(VER)/  $(GITREV) | xz > ../airspy-host_$(VER).orig.tar.xz
+	rm -rf host
+	tar Jxf airspy-host_$(VER).orig.tar.xz
+	- rm -f airspy-host-$(VER)/.travis.yml
+	- rm -rf airspy-host-$(VER)/libairspy/vc
+	rm airspy-host_$(VER).orig.tar.xz
+	tar Jcf airspy-host_$(VER).orig.tar.xz airspy-host-$(VER)
+	rm -rf airspy-host-$(VER)

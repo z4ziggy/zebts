@@ -1,0 +1,53 @@
+Source: hackrf
+Section: libs
+Priority: extra
+Maintainer: A. Maitland Bottoms <bottoms@debian.org>
+Build-Depends: debhelper (>= 9.0.0~), cmake, pkg-config,
+ libusb-1.0-0-dev [linux-any], libusb2-dev [kfreebsd-any]
+Standards-Version: 3.9.4
+Homepage: http://greatscottgadgets.com/hackrf/
+Vcs-Git: git://anonscm.debian.org/users/bottoms/pkg-hackrf.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/bottoms/pkg-hackrf.git;a=summary
+
+Package: libhackrf-dev
+Section: libdevel
+Architecture: any
+Pre-Depends: multiarch-support, ${misc:Pre-Depends}
+Depends: libhackrf0 (= ${binary:Version}), ${misc:Depends}
+Description: Software defined radio peripheral
+ HackRF is an open source Software Defined Radio that can receive
+ and transmit between 30 MHz and 6 GHz. HackRF has a 20 MHz bandwidth.
+ It is a High Speed USB device powered by the USB bus.
+ .
+ This package contains development files.
+
+Package: libhackrf0
+Section: libs
+Architecture: any
+Pre-Depends: multiarch-support, ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: Software defined radio peripheral
+ HackRF is an open source Software Defined Radio that can receive
+ and transmit between 30 MHz and 6 GHz. HackRF has a 20 MHz bandwidth.
+ It is a High Speed USB device powered by the USB bus.
+ .
+ This package contains the shared library.
+
+Package: hackrf
+Section: comm
+Architecture: any
+Depends: libhackrf0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Software defined radio peripheral
+ HackRF is an open source Software Defined Radio that can receive
+ and transmit between 30 MHz and 6 GHz. HackRF has a 20 MHz bandwidth.
+ It is a High Speed USB device powered by the USB bus.
+ .
+ This package contains a set of command line utilities:
+  * hackrf_cpldjtag: program CLPD
+  * hackrf_info: probe device and show configuration
+  * hackrf_max2837: chip register read/write tool
+  * hackrf_rffc5071: chip register read/write tool
+  * hackrf_si5351c: chip register read/write tool
+  * hackrf_spiflash: read and write flash data from file.
+  * hackrf_transfer: file based transmit and receive sdr

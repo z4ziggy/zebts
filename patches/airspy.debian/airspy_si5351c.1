@@ -1,0 +1,39 @@
+.TH "airspy_si5351c" 1 "2014.04.18" AIRSPY "User Commands"
+.SH NAME
+airspy_si5351c \- chip register read/write tool
+.SH DESCRIPTION
+The Airspy is a tiny and efficient software defined radio receiver.
+.LP
+This application lets the user control the si5351c chip.
+.SH SYNOPSIS
+.B  airspy_si5351c [OPTIONS]
+.SH OPTIONS
+.IP "-n, --register <n>: set register number for subsequent read/write operations"
+.IP "-r, --read: read register specified by last -n argument, or all registers"
+.IP "-w, --write <v>: write register specified by last -n argument with value <v>"
+.SH EXAMPLES
+.IP "airspy_si5351c -n 12 -r # reads from register 12"
+.IP "airspy_si5351c -r # reads all registers"
+.IP "airspy_si5351c -n 10 -w 22 # writes register 10 with 22 decimal"
+.SH SEE ALSO
+Airspy web page:
+.B http://airspy.com/
+.LP
+Other airspy programs:
+.sp
+airspy_r820t(1), airspy_info(1), airspy_rx(1), airspy_spiflash(1)
+.SH AUTHOR
+This manual page was written by Maitland Bottoms
+for the Debian project (but may be used by others).
+.SH COPYRIGHT
+Copyright (c) 2014 A. Maitland Bottoms <bottoms@debian.org>
+.LP
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+.LP
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.

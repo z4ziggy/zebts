@@ -1,0 +1,683 @@
+yate (5.5.0-git) UNRELEASED; urgency=medium
+
+  * pkg
+
+ -- ziggy <ziggy>  Mon, 01 May 2015 23:29:50 +0300
+
+yate (5.4.1~vir2015020901) UNRELEASED; urgency=medium
+
+  * Merged upstream updates (SVN r5936)
+  * Fixed libyatescript.so symlink in yate-dev package
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Mon, 09 Feb 2015 23:29:50 +0300
+
+yate (5.4.1~vir2014121401) UNRELEASED; urgency=low
+
+  * Added non-blocking mode for external scripts
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Sun, 14 Dec 2014 00:05:58 +0300
+
+yate (5.4.1~vir2014121201) UNRELEASED; urgency=low
+
+  * Upstream fixes, crypto-related improvements.
+  * Multiple params setting for queued calls.
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Fri, 12 Dec 2014 10:06:50 +0300
+
+yate (5.4.1~vir2014111601) UNRELEASED; urgency=low
+
+  * Fix for defer_incoming option :)
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Sun, 16 Nov 2014 17:18:32 +0300
+
+yate (5.4.1~vir2014111102) UNRELEASED; urgency=low
+
+  * Added 'defer_incoming' to cdrbuild.conf
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Tue, 11 Nov 2014 18:03:37 +0300
+
+yate (5.4.1~vir2014111101) UNRELEASED; urgency=low
+
+  * Merged upstream updates (SVN r5923):
+  * Better javascript
+  * SQLite database support
+  * iSAC codec fix
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Tue, 11 Nov 2014 13:45:09 +0300
+
+yate (5.4.1~vir2014082101) UNRELEASED; urgency=low
+
+  * More video codecs support (VP8, VP9)
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Thu, 21 Aug 2014 12:08:42 +0400
+
+yate (5.4.1~vir2014082001) UNRELEASED; urgency=low
+
+  * Deps fixed
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Wed, 20 Aug 2014 13:04:40 +0400
+
+yate (5.4.1~vir2014081801) UNRELEASED; urgency=low
+
+  * Fixed new files packaging (most notably, javascripts
+    and faxchan module).
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Mon, 18 Aug 2014 17:16:30 +0400
+
+yate (5.4.1~vir2014081201) UNRELEASED; urgency=low
+
+  * Merged upstream updates (SVN r5904)
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Tue, 12 Aug 2014 09:00:43 +0400
+
+yate (5.3.1~vir2014071801) UNRELEASED; urgency=low
+
+  * Merged upstream updates (SVN r5869), most notably it is
+    JSON javascript object, SDP version number calculation fixes,
+    CSEq numbers generation fix, several other fixes.
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Fri, 18 Jul 2014 13:22:32 +0400
+
+yate (5.3.1~vir2014061601) UNRELEASED; urgency=low
+
+  * Merged upstream updates (svn r5844)
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Mon, 16 Jun 2014 09:48:46 +0400
+
+yate (5.3.1~vir2014052001) UNRELEASED; urgency=low
+
+  * Merged upstream updates and fixes (SVN r5835)
+  * Applied fix for bug 0000367 (crypto tag)
+  * Applied SDP attributes separation patch
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Tue, 20 May 2014 12:05:02 +0400
+
+yate (5.2.1~vir2014041801) UNRELEASED; urgency=low
+
+  * Merged upsetream updates and fixes
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Fri, 18 Apr 2014 14:11:15 +0400
+
+yate (5.1.1~vir2014030101) UNRELEASED; urgency=low
+
+  * Merged upsetream updates and fixes (like eliza chat bot)
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Sat, 01 Mar 2014 22:56:37 +0400
+
+yate (5.0.1~vir2014021001) UNRELEASED; urgency=low
+
+  * Merged upsetream updates (gsm library and fixes)
+  * Fixed PATH in init script
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Mon, 10 Feb 2014 13:31:01 +0400
+
+yate (5.0.1~vir2013121601) UNRELEASED; urgency=low
+
+  * Yate.pm: full control over message's reponses
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Mon, 16 Dec 2013 12:05:26 +0400
+
+yate (5.0.1~vir2013121002) UNRELEASED; urgency=low
+
+  * external module: allow setting "scriptname" of global script
+    from '%%>connect' line (using optional "id" parameter).
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Tue, 10 Dec 2013 00:52:35 +0400
+
+yate (5.0.1~vir2013121001) UNRELEASED; urgency=low
+
+  * external module: "scriptname" local variable added
+    to allow tcp-connected global script to set it's name
+  * enabled coredumps
+  * debug timestamps now will be in local timezone
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Tue, 10 Dec 2013 00:31:09 +0400
+
+yate (5.0.1~vir2013120801) UNRELEASED; urgency=low
+
+  * Fixed pidfile creation after reboot.
+  * Merged upstream fixes.
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Sun, 08 Dec 2013 01:42:07 +0400
+
+yate (5.0.1~vir2013110501) UNRELEASED; urgency=low
+
+  * Merged upstream changes: IPv6 and bugfixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 05 Nov 2013 16:18:20 +0400
+
+yate (4.3.1~vir2013102201) UNRELEASED; urgency=low
+
+  * Fix Yate.pm bug (inproper handling of "0" values)
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 22 Oct 2013 23:33:33 +0400
+
+yate (4.3.1~vir2013100902) UNRELEASED; urgency=low
+
+  * Fix event subscription
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 09 Oct 2013 23:19:11 +0400
+
+yate (4.3.1~vir2013100901) UNRELEASED; urgency=low
+
+  * ysnmpdata moved into /var/cache/yate and symlinked into /etc/yate
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 09 Oct 2013 09:37:43 +0400
+
+yate (4.3.1~vir2013100801) UNRELEASED; urgency=low
+
+  * Fixed H264 codec support :)
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 08 Oct 2013 13:36:11 +0400
+
+yate (4.3.1~vir2013093001) UNRELEASED; urgency=low
+
+  * New setting in register.conf: unregister_expired.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 30 Sep 2013 15:20:42 +0400
+
+yate (4.3.1~vir2013092601) UNRELEASED; urgency=low
+
+  * Added H264 codec support
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 26 Sep 2013 10:06:37 +0400
+
+yate (4.3.1~vir2013092003) UNRELEASED; urgency=low
+
+  * one more inband dtmf fix
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 20 Sep 2013 17:42:56 +0400
+
+yate (4.3.1~vir2013092002) UNRELEASED; urgency=low
+
+  * dtmfinband=force support for buggy E1 cards
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 20 Sep 2013 16:21:08 +0400
+
+yate (4.3.1~vir2013092001) UNRELEASED; urgency=low
+
+  * Merged upstream fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 20 Sep 2013 09:20:18 +0400
+
+yate (4.3.1~vir2013080901) UNRELEASED; urgency=low
+
+  * Merged upstream fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 09 Aug 2013 14:50:24 +0400
+
+yate (4.3.1~vir2013080701) UNRELEASED; urgency=low
+
+  * new package "libyate-perl"
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 07 Aug 2013 06:20:35 +0400
+
+yate (4.3.1~vir2013073001) UNRELEASED; urgency=low
+
+  * Added "negative" mode for message sniffer filter
+  * Merged upstream SIP NAT and MIB fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 30 Jul 2013 09:30:19 +0400
+
+yate (4.3.1~vir2013072201) UNRELEASED; urgency=low
+
+  * Merged upstream changes, most notably SNMP traps-related.
+  * Added lazyrec.yate module for those who want to give it a try.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 22 Jul 2013 18:13:09 +0400
+
+yate (4.3.1~vir2013062702) UNRELEASED; urgency=low
+
+  * Fix build (again)
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 27 Jun 2013 16:27:01 +0400
+
+yate (4.3.1~vir2013062701) UNRELEASED; urgency=low
+
+  * Fix build
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 27 Jun 2013 10:44:30 +0400
+
+yate (4.3.1~vir2013062601) UNRELEASED; urgency=low
+
+  * Merged upstream changes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 26 Jun 2013 16:34:03 +0400
+
+yate (4.3.1~vir2013051401) UNRELEASED; urgency=low
+
+  * Merged upstream changes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 14 May 2013 15:47:23 +0400
+
+yate (4.3.1~vir2013041701) UNRELEASED; urgency=low
+
+  * Added postgres async notifications support
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 17 Apr 2013 09:26:09 +0400
+
+yate (4.3.1~vir2013041501) UNRELEASED; urgency=low
+
+  * Merged my 'hstore' branch - postgres 'hstore' type support.
+  * Merged my 'tranposedb' branch - support for multile 'field', 'value'
+    records returned by routing query.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 15 Apr 2013 14:22:13 +0400
+
+yate (4.3.1~vir2013040202) UNRELEASED; urgency=low
+
+  * Fixed debug symbols package creation.
+  * Removed libyate-dbg and yate-telhw-dbg packages.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 02 Apr 2013 16:14:09 +0400
+
+yate (4.3.1~vir2013040201) UNRELEASED; urgency=low
+
+  * Merged upstream changes
+  * Added missing script 'banbrutes.php' packaging
+  * Added module 'lksctp' building and packaging
+  * Added new module 'cdrcombine' packageing
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 02 Apr 2013 15:11:15 +0400
+
+yate (4.3.1~vir2013011501) UNRELEASED; urgency=low
+
+  * Merged upstream changes (version 4.3.1)
+    4.3 brings many minor features, improvements and problem fixes.
+  * ISDN+SS7 - fixes in subcomponent configuration handling
+  * SIGTRAN - better SCTP error condition handling, added heartbeat support
+  * ISUP - fixed handling of several circuit blocking scenarios, added charging
+    message handling
+  * SCCP - support for GTT routing between different networks
+  * CAMEL+MAP - support for operations having different structure per version
+  * Javascript - added XML support, fixed some parsing errors and error reporting
+  * SIP - improved DTMF configuration and negotiation, fixed REGISTER interval
+    handling and keepalives
+  * RTP - fixed a memory leak, fixed timestamps when data is repacked
+  * IAX - fixes in handling logic for various frame types and audio timestamps
+  * Jingle - added support for more minor protocol variations
+  * H.323 - support for setting some protocol timeouts
+  * RADIUS - support for interim updates and Quintum attributes
+  * Unspecific - fixed a number of infrequent crashes, deadlocks and performance
+    issues
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 15 Jan 2013 10:23:51 +0400
+
+yate (4.2.1~vir2012110201) UNRELEASED; urgency=low
+
+  * Merged upstream fixes and improvements, including
+  * Recording both channels into single file.
+  * General sip listener configuration change.
+  * H323 and Javascript fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 02 Nov 2012 13:29:46 +0400
+
+yate (4.2.1~vir2012102303) UNRELEASED; urgency=low
+
+  * Undone last change - it was never needed.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 23 Oct 2012 13:26:02 +0400
+
+yate (4.2.1~vir2012102302) UNRELEASED; urgency=low
+
+  * Special handling for sipdroid's sdp added
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 23 Oct 2012 13:15:04 +0400
+
+yate (4.2.1~vir2012102301) UNRELEASED; urgency=low
+
+  * Added H263-1998 payload mapping
+  * Merge upstream fixes and improvements, most notabely:
+  * Postgresql database connection pooling
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 23 Oct 2012 11:06:14 +0400
+
+yate (4.2.1~vir2012100401) UNRELEASED; urgency=low
+
+  * Merge upstream fixes, including new DTMF sending method selection
+  * Fix building on debian testing and unstable
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 04 Oct 2012 16:21:36 +0400
+
+yate (4.2.1~vir2012090501) UNRELEASED; urgency=low
+
+  * Merged upstream fixes, including the following:
+  * reINVITE fix
+  * SIP flood prevention and 'floodevents' new meaning (dropping packaets)
+  * maxchans setting sip/iax/jingle/h323 chans
+  * a number of jingle and IAX fixes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 05 Sep 2012 13:37:18 +0400
+
+yate (4.1.1~vir2012071201) UNRELEASED; urgency=low
+
+  * Merged upstream fixes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 12 Jul 2012 10:45:39 +0400
+
+yate (4.1.1~vir2012070902) UNRELEASED; urgency=low
+
+  * yate-h323 package restored
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 09 Jul 2012 12:40:34 +0400
+
+yate (4.1.1~vir2012070901) UNRELEASED; urgency=low
+
+  * Merged upstream fixes, webrtc-based iLBC codec really added.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 09 Jul 2012 12:09:04 +0400
+
+yate (4.1.1~vir2012070601) UNRELEASED; urgency=low
+
+  * Merged upstream changes: bugfixes, webrtc-based iLBC codec.
+  * Trying to fix building on unstable (without libopenh323)
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 06 Jul 2012 14:57:01 +0400
+
+yate (4.1.1~vir2012062601) UNRELEASED; urgency=low
+
+  * Merged upstream changes: Javascript improvements, various bugfixes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 26 Jun 2012 10:48:39 +0400
+
+yate (4.1.1~vir2012061301) UNRELEASED; urgency=low
+
+  * Merged upstream changes: messages tracking, several fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 13 Jun 2012 11:03:18 +0400
+
+yate (4.1.1~vir2012050701) UNRELEASED; urgency=low
+
+  * Merged upstream changed: gvoice module, bugfixes.
+  * Version scheme change (~virXXXXXXXXXX suffix).
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 07 May 2012 00:12:08 +0400
+
+yate (4.0.1.vir2012040401) UNRELEASED; urgency=low
+
+  * Merged lots of upstream changes: jabber component, rtp dejitter,
+    rmanager line editing, iSAC codec, many small fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 04 Apr 2012 23:49:36 +0400
+
+yate (4.0.1.vir2012022101) UNRELEASED; urgency=low
+
+  * Merged upstream changes: major version change!
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 21 Feb 2012 19:19:41 +0400
+
+yate (3.3.3.vir2012021602) UNRELEASED; urgency=low
+
+  * library filename fix
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 16 Feb 2012 11:51:15 +0400
+
+yate (3.3.3.vir2012021601) UNRELEASED; urgency=low
+
+  * Merged upstream changes. Javascript module name typo fixed.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 16 Feb 2012 11:39:37 +0400
+
+yate (3.3.3.vir2012021501) UNRELEASED; urgency=low
+
+  * Merged upstream changes: new client UI design, Javascript module
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 15 Feb 2012 18:56:58 +0400
+
+yate (3.3.3.vir2012012801) UNRELEASED; urgency=low
+
+  * Merged upstream changes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Sat, 28 Jan 2012 10:56:43 +0400
+
+yate (3.3.3.vir2011120704) UNRELEASED; urgency=low
+
+  * Fixed UU IE duplication
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 07 Dec 2011 16:50:23 +0400
+
+yate (3.3.3.vir2011120703) UNRELEASED; urgency=low
+
+  * Fixed UUS IE encoding (missing protocol discrimrnator added)
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 07 Dec 2011 15:17:12 +0400
+
+yate (3.3.3.vir2011120702) UNRELEASED; urgency=low
+
+  * Added UUS encoding mplementation
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 07 Dec 2011 14:23:50 +0400
+
+yate (3.3.3.vir2011120701) UNRELEASED; urgency=low
+
+  * Merged upstream changes.
+  * Fix outgoing UUS
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 07 Dec 2011 11:35:17 +0400
+
+yate (3.3.3.vir2011111801) UNRELEASED; urgency=low
+
+  * Experimantal ISDN UUS support
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 18 Nov 2011 16:10:15 +0400
+
+yate (3.3.3.vir2011111501) UNRELEASED; urgency=low
+
+  * Merge upstream
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 15 Nov 2011 09:03:57 +0400
+
+yate (3.3.3.vir2011110903) UNRELEASED; urgency=low
+
+  * new package version finally
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 09 Nov 2011 16:23:23 +0400
+
+yate (3.3.3.vir2011110902) UNRELEASED; urgency=low
+
+  * Fix wrong package version
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 09 Nov 2011 16:22:34 +0400
+
+yate (3.3.3.vir2011110901) UNRELEASED; urgency=low
+
+  * Added more new files
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 09 Nov 2011 16:17:31 +0400
+
+yate (3.3.3.vir2011110902) UNRELEASED; urgency=low
+
+  * added Build-Depends: build-essential
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 09 Nov 2011 13:43:13 +0400
+
+yate (3.3.3.vir2011110901) UNRELEASED; urgency=low
+
+  * Merged lates upstream changes
+  * Fix building (failed due to isupmangler module path change)
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 09 Nov 2011 12:05:56 +0400
+
+yate (3.3.3.vir2011090601) UNRELEASED; urgency=low
+
+  * Fixed overlapdial timer threads leak on reload
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 06 Sep 2011 17:43:09 +0400
+
+yate (3.3.3.vir2011080801) UNRELEASED; urgency=low
+
+  * Merged upstream updates
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 08 Aug 2011 11:47:56 +0400
+
+yate (3.3.3.vir2011072601) UNRELEASED; urgency=low
+
+  * Fixed crash on overlapdial module unload
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 26 Jul 2011 18:41:41 +0400
+
+yate (3.3.3.vir2011072501) UNRELEASED; urgency=low
+
+  * Fix timeout-based overlap dialing lost in prev. versions.
+  * Merged upstream changes and fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 25 Jul 2011 16:07:30 +0400
+
+yate (3.3.3.vir2011071301) UNRELEASED; urgency=low
+
+  * Merged a lot of upstream changes, most notably, SIP over TCP/TLS
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 13 Jul 2011 21:32:27 +0400
+
+yate (3.3.3.vir2011063001) UNRELEASED; urgency=low
+
+  * SDP FMTP lines forwarding should now work as expected
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 30 Jun 2011 15:18:17 +0400
+
+yate (3.3.3.vir2011062601) UNRELEASED; urgency=low
+
+  * Fixed SDP fmtp lines forwarding.
+  * Merged latest upstream changes: fixes and new module 'cache'
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Sun, 26 Jun 2011 09:42:52 +0400
+
+yate (3.3.3.vir2011052702) UNRELEASED; urgency=low
+
+  * Crash fix
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 27 May 2011 12:33:26 +0400
+
+yate (3.3.3.vir2011052701) UNRELEASED; urgency=low
+
+  * SDP fmtp lines forwarding fix
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 27 May 2011 12:13:46 +0400
+
+yate (3.3.3.vir2011052601) UNRELEASED; urgency=low
+
+  * SDP fmtp lines forwarding
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 26 May 2011 18:52:34 +0400
+
+yate (3.3.3.vir2011051601) UNRELEASED; urgency=low
+
+  * Merged marian's QOP implementation
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 16 May 2011 14:08:31 +0400
+
+yate (3.3.3.vir2011051401) UNRELEASED; urgency=low
+
+  * Merge SIP QOP handling with upstream
+  * New Yate.pm
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Sat, 14 May 2011 10:49:42 +0400
+
+yate (3.3.3.vir2011050401) UNRELEASED; urgency=low
+
+  * Merged upstream updates
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Wed, 04 May 2011 23:03:00 +0400
+
+yate (3.3.3.vir2011050305) UNRELEASED; urgency=low
+
+  * Support "xsip_body_encoding" parameter in xsip.generate message
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 03 May 2011 22:34:03 +0400
+
+yate (3.3.3.vir2011050304) UNRELEASED; urgency=low
+
+  * FAKE
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 03 May 2011 14:23:35 +0400
+
+yate (3.3.3.vir2011043001) UNRELEASED; urgency=low
+
+  * Merged upstream fixes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Sat, 30 Apr 2011 10:39:21 +0400
+
+yate (3.3.3.vir2011042801) UNRELEASED; urgency=low
+
+  * Merged upstream fixes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 28 Apr 2011 22:30:19 +0400
+
+yate (3.3.3.vir2011041701) UNRELEASED; urgency=low
+
+  * New debian package. Fixed pidfile-related troubles.
+  * Merged a lot of upstream fixes.
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Sun, 17 Apr 2011 00:09:18 +0400
+
+yate (3.2.1.vir2011032102) UNRELEASED; urgency=low
+
+  * Moved jabberclient.yate from yate-qt4 into libyate package
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 21 Mar 2011 20:52:22 +0300
+
+yate (3.2.1.vir2011032101) UNRELEASED; urgency=low
+
+  * pulled in upstramm changes (tel: uri support and bug fixes)
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 21 Mar 2011 16:05:12 +0300
+
+yate (3.2.1.vir2011031401) UNRELEASED; urgency=low
+
+  * Fix bug introduced by recent history rewrite
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Mon, 14 Mar 2011 06:57:58 +0300
+
+yate (3.2.1.vir2011031101) UNRELEASED; urgency=low
+
+  * pulled in upstramm changes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Fri, 11 Mar 2011 11:29:59 +0300
+
+yate (3.1.1.vir2011021901) UNRELEASED; urgency=low
+
+  * pulled in upstream changes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Sat, 19 Feb 2011 13:55:49 +0300
+
+yate (3.1.1.vir2011020601) UNRELEASED; urgency=low
+
+  * New Debian stable release out there, we have new versioning scheme for testing and stable ports
+
+ -- Vasily i. Redkin <yatedeb@vir.otvt.ru>  Sun, 06 Feb 2011 13:29:09 +0300
+
+yate (3.1.1.vir2011020102) UNRELEASED; urgency=low
+
+  * Pulled in upstream changes
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 01 Feb 2011 11:22:30 +0300
+
+yate (3.0.1.vir2011020101) UNRELEASED; urgency=low
+
+  * Changed debian package versioning scheme to YYYYMMDDRR
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Tue, 01 Feb 2011 10:16:25 +0300
+
+yate (3.0.0.vir12647) unstable; urgency=low
+
+  * Fixed dependency packages versions
+
+ -- Vasily i. Redkin <vir@vir.otvt.ru>  Thu, 29 Apr 2010 13:17:26 +0400
+
+yate (3.0.0.vir12646) unstable; urgency=low
+
+  * Changed version scheme to include svk revision
+
+ -- Vasily i. Redkin <vir@vir.ctm.ru>  Thu, 29 Apr 2010 10:52:57 +0400
+
+yate (3.0.0) unstable; urgency=low
+
+  * Updated to new version
+
+ -- Vasily i. Redkin <vir@vir.ctm.ru>  Fri, 23 Apr 2010 17:46:14 +0400
+
+yate (2.0.0) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Vasily i. Redkin <vir@ctm.ru>  Mon, 06 Oct 2008 13:28:44 +0400

@@ -1,0 +1,20 @@
+--- a/cmake/modules/FindUSB1.cmake
++++ b/cmake/modules/FindUSB1.cmake
+@@ -27,7 +27,16 @@
+   FIND_PATH(LIBUSB_INCLUDE_DIR libusb.h
+     PATHS ${PC_LIBUSB_INCLUDEDIR} ${PC_LIBUSB_INCLUDE_DIRS})
+ 
+-  FIND_LIBRARY(LIBUSB_LIBRARIES NAMES usb-1.0
++  #standard library name for libusb-1.0
++  set(libusb1_library_names usb-1.0)
++
++  #libusb-1.0 compatible library on freebsd
++  if((CMAKE_SYSTEM_NAME STREQUAL "FreeBSD") OR (CMAKE_SYSTEM_NAME STREQUAL "kFreeBSD"))
++    list(APPEND libusb1_library_names usb)
++  endif()
++
++  FIND_LIBRARY(LIBUSB_LIBRARIES
++    NAMES ${libusb1_library_names}
+     PATHS ${PC_LIBUSB_LIBDIR} ${PC_LIBUSB_LIBRARY_DIRS})
+ 
+   include(FindPackageHandleStandardArgs)

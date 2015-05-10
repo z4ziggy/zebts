@@ -1,0 +1,126 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: hackrf
+Upstream-Contact: https://github.com/mossmann/hackrf
+Source:
+ git clone https://github.com/mossmann/hackrf.git
+ The upstream package source tarball was generated from the tag:
+ git archive --format=tar --prefix=hackrf-2014.08.1/ v2014.08.1 | xz > ../hackrf_2014.08.1.orig.tar.xz
+Comment:
+ Debian packages by A. Maitland Bottoms
+ .
+ Upstream Authors: 
+ Michael Ossmann <mike@ossmann.com>
+Copyright: 2012,2013 Michael Ossmann <mike@ossmann.com>
+License: GPL-2+
+
+Files: COPYING
+Copyright: 1989, 1991 Free Software Foundation, Inc.
+License:
+ Everyone is permitted to copy and distribute verbatim copies
+
+Files: *
+Copyright: 2012,2013 Michael Ossmann <mike@ossmann.com>
+           2012,2013 Jared Boone <jared@sharebrained.com>
+License: GPL-2+
+
+Files: host/*
+Comment: Debian packages built with this directory only.
+Copyright: 2012 Michael Ossmann <mike@ossmann.com>
+           2012 Jared Boone <jared@sharebrained.com>
+           2012,2013 Benjamin Vernoux <titanmkd@gmail.com>
+License: GPL-2+
+
+Files: host/hackrf-tools/getopt/getopt.[ch]
+Copyright: 1987-1996,1998-2001 Free Software Foundation, Inc.
+License: LGPL-2.1+
+
+Files: hardware/.../*.py
+Copyright: 2012,2013 Jared Boone <jared@sharebrained.com>
+License: GPL-2+
+
+Files: doc/* hardware/*
+Copyright: 2012 Michael Ossmann <mike@ossmann.com>
+License: GPL-2+
+
+Files: firmware/common/Makefile_inc.mk
+Copyright: 2009 Uwe Hermann <uwe@hermann-uwe.de>
+           2010 Piotr Esden-Tempski <piotr@esden.net>
+           2012 Michael Ossmann <mike@ossmann.com>
+           2012 Benjamin Vernoux <titanmkd@gmail.com>
+           2012 Jared Boone <jared@sharebrained.com>
+License: GPL-2+
+
+Files: firmware/*rom_to_ram/Makefile
+Copyright: 2013 Benjamin Vernoux <titanmkd@gmail.com>
+License: GPL-2+
+
+Files: firmware/*
+Copyright: 2012 Michael Ossmann <mike@ossmann.com>
+           2012 Jared Boone <jared@sharebrained.com>
+           2012,2013 Benjamin Vernoux <titanmkd@gmail.com>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2013 A. Maitland Bottoms <bottoms@debian.org>
+License: GPL-2+
+
+Files: host/cmake/modules/FindUSB1.cmake
+Copyright: 2006, 2008  Laurent Montel, <montel@kde.org>
+Comment: Was "Try to find the freetype library", Now "Find libusb"
+License:
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products 
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: LGPL-2.1+
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2".

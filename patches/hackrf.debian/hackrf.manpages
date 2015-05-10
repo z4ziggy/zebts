@@ -1,0 +1,7 @@
+debian/hackrf_max2837.1
+debian/hackrf_si5351c.1
+debian/hackrf_transfer.1
+debian/hackrf_rffc5071.1
+debian/hackrf_spiflash.1
+debian/hackrf_cpldjtag.1
+debian/hackrf_info.1
